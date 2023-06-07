@@ -1,0 +1,29 @@
+{{- if (merge (index .Values "bxapi") ).ingress.enabled }}
+
+{{- $v := index .Values "bxapi" -}}
+
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  labels:
+    app.kubernetes.io/name: {{ include "bx.name" . }}
+    helm.sh/chart: {{ include "bx.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+  annotations: {{ toYaml $v.ingress.annotations  | nindent 4 }}
+  name: {{ .Release.Name }}-api-ingress
+spec:
+  rules:
+  - host: {{ .Values.bxapi.ingress.host }}
+    http:
+      paths:
+      - path: /
+        #pathType: Prefix
+        backend:
+          serviceName: {{ .Release.Name }}-bxapi
+          servicePort: {{ .Values.bxapi.services.https.servicePort }}
+  tls:
+  - hosts:
+      - {{ .Values.bxapi.ingress.host }}
+    secretName: {{ .Values.bxapi.ingress.tlsSecret }}
+{{- end -}}

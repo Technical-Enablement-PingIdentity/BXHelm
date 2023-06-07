@@ -157,6 +157,59 @@ bxretailapi:
       # ingressPort: 443
       dataService: true
 
+bxapi:
+  enabled: false
+  name: bxapi
+  image:
+    repository: gcr.io/ping-gte
+    name: bxapi
+    tag: latest
+    pullPolicy: Always
+    pullSecret: "gcr-pull-secret"
+  privateCert:
+    generate: true
+  volumeMounts:
+    - mountPath: /run/secrets/private-cert
+      name: private-cert
+  envs:
+    STARTUP_COMMAND: "tail"
+    STARTUP_BACKGROUND_OPTS: "-f /dev/null"
+  ingress:
+    host: bxapi.ping-devops.com
+    tlsSecret: bx-api-tls
+    annotations: {}
+  workload:
+    deployment:
+      strategy:
+        type: Recreate
+  container:
+    resources:
+      requests:
+        cpu: 0
+        memory: 1Gi
+      limits:
+        cpu: 1500m
+        memory: 1Gi
+    probes:
+      livenessProbe:
+        exec:
+          command:
+            - echo
+      readinessProbe:
+        exec:
+          command:
+            - echo
+      startupProbe:
+        exec:
+          command:
+            - echo
+  services:
+    https:
+      containerPort: 4000
+      servicePort: 4000
+      # ingressPort: 443
+      dataService: true
+
 bxfinanceapp:
   enabled: false
   name: bxfinanceapp
