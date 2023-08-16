@@ -262,6 +262,9 @@ bxfinanceapp:
       servicePort: 5000
       # ingressPort: 443
       dataService: true
+  
+  postgres:
+    enabled: false
 
 global: {}
 
