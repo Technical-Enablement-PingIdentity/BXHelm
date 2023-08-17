@@ -93,7 +93,7 @@ spec:
             optional: true
         - configMapRef:
             name: {{ .Release.Name }}-postgres-env-vars
-        image: openbankingdb-dev
+        image: gcr.io/ping-gte/openbankingdb-dev
         imagePullPolicy: IfNotPresent
         lifecycle: {}
         livenessProbe:
