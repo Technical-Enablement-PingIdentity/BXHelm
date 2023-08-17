@@ -95,8 +95,6 @@ spec:
             name: {{ .Release.Name }}-postgres-env-vars
         image: gcr.io/ping-gte/openbankingdb-dev
         imagePullPolicy: IfNotPresent
-        imagePullSecrets:
-        - name: gcr-pull-secret
         lifecycle: {}
         livenessProbe:
           exec:
@@ -150,6 +148,8 @@ spec:
       - name: out-dir
         persistentVolumeClaim:
           claimName: out-dir
+      imagePullSecrets:
+      - name: gcr-pull-secret
   updateStrategy:
     rollingUpdate:
       partition: 0
