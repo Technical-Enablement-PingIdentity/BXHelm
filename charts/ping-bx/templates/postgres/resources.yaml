@@ -93,8 +93,13 @@ spec:
             optional: true
         - configMapRef:
             name: {{ .Release.Name }}-postgres-env-vars
-        image: postgres:12.16
-        imagePullPolicy: IfNotPresent
+        image:
+          repository: gcr.io/ping-gte
+          name: openbankingdb-dev
+          tag: latest
+          pullPolicy: Always
+          pullSecret: "gcr-pull-secret"
+        #imagePullPolicy: IfNotPresent
         lifecycle: {}
         livenessProbe:
           exec:
