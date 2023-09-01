@@ -1,0 +1,11 @@
+{{- include "pinglib.workload" (list . "postgres") -}}
+
+
+
+{{- define "postgres.workload" -}}
+spec:
+  template:
+    metadata:
+      labels:
+        clusterIdentifier: {{ include "pinglib.addreleasename" (append . "postgres") }}
+{{- end -}}
