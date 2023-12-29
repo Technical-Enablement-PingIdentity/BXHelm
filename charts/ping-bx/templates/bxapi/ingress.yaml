@@ -22,6 +22,16 @@ spec:
         backend:
           serviceName: {{ .Release.Name }}-bxapi
           servicePort: {{ .Values.bxapi.services.https.servicePort }}
+{{- if .Values.bxapi.ingress.alias }} 
+  - host: {{ .Values.bxapi.ingress.alias }}
+    http:
+      paths:
+      - path: /
+        #pathType: Prefix
+        backend:
+          serviceName: {{ .Release.Name }}-bxapi
+          servicePort: {{ .Values.bxapi.services.https.servicePort }}
+{{- end }}
   tls:
   - hosts:
       - {{ .Values.bxapi.ingress.host }}
