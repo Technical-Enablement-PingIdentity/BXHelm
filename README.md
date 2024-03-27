@@ -11,13 +11,17 @@ See [Ping Identity's DevOps Page](https://devops.pingidentity.com) for additiona
 ### Useful Helm commands
 
 Add the Ping BX chart repo:
-h`elm repo add ping-bx https://technical-enablement-pingidentity.github.io/BXHelm`
+
+```helm repo add ping-bx https://technical-enablement-pingidentity.github.io/BXHelm```
 
 Download the chart locally:
-`helm pull ping-bx/ping-bx --untar`
+
+```helm pull ping-bx/ping-bx --untar```
 
 Update the chart package. Be sure to increment the version in the Chart.yaml.
-helm package charts/ping-bx
+
+```helm package charts/ping-bx```
 
 Update the repo index after making any changes. 
-helm repo index . --url https://technical-enablement-pingidentity.github.io/BXHelm/
+
+```helm repo index . --url https://technical-enablement-pingidentity.github.io/BXHelm/```
