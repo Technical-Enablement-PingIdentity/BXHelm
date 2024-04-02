@@ -18,19 +18,23 @@ spec:
     http:
       paths:
       - path: /
-        #pathType: Prefix
+        pathType: Prefix
         backend:
-          serviceName: {{ .Release.Name }}-bxapi
-          servicePort: {{ .Values.bxapi.services.https.servicePort }}
+          service:
+            name: {{ .Release.Name }}-bxapi
+            port:
+              number: {{ .Values.bxapi.services.https.servicePort }}
 {{- if .Values.bxapi.ingress.alias }} 
   - host: {{ .Values.bxapi.ingress.alias }}
     http:
       paths:
       - path: /
-        #pathType: Prefix
+        pathType: Prefix
         backend:
-          serviceName: {{ .Release.Name }}-bxapi
-          servicePort: {{ .Values.bxapi.services.https.servicePort }}
+          service:
+            name: {{ .Release.Name }}-bxapi
+            port:
+              number: {{ .Values.bxapi.services.https.servicePort }}
 {{- end }}
   tls:
   - hosts:
