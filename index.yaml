@@ -2,34 +2,34 @@ apiVersion: v1
 entries:
   ping-bx:
   - apiVersion: v2
-    appVersion: 0.10.2
-    created: "2024-04-02T13:53:11.517553-07:00"
+    appVersion: 0.8.3
+    created: "2024-04-02T15:22:30.679745-07:00"
     dependencies:
     - import-values:
       - child: global
         parent: global
       name: ping-devops
       repository: https://helm.pingidentity.com
-      version: 0.10.2
+      version: 0.8.3
     description: A Helm chart for Kubernetes
-    digest: 28c472c8ee072007b925621bedca16e3ab9542f2f06856c702a04d3c4f1d4f7b
+    digest: 1b21f479a058d6e8f64e1d7c98d98d5b2a7b35bb626bc158115bb47136e096e0
     name: ping-bx
     type: application
     urls:
     - https://technical-enablement-pingidentity.github.io/BXHelm/ping-bx-0.2.1.tgz
     version: 0.2.1
   - apiVersion: v2
-    appVersion: 0.10.2
-    created: "2024-04-02T13:53:11.514251-07:00"
+    appVersion: 0.7.6
+    created: "2024-04-02T15:22:30.676894-07:00"
     dependencies:
     - import-values:
       - child: global
         parent: global
       name: ping-devops
       repository: https://helm.pingidentity.com
-      version: 0.10.2
+      version: 0.7.6
     description: A Helm chart for Kubernetes
-    digest: 7ef2e394f6bba2190a4d7008f50ca2816520f50deb907a27a39fcc20dcc335a6
+    digest: 0238a608fcee9b8c2d764ac0915ebe0be5d27f58658359cadfa6b2f850635e08
     name: ping-bx
     type: application
     urls:
@@ -37,7 +37,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 0.7.6
-    created: "2024-04-02T13:53:11.510392-07:00"
+    created: "2024-04-02T15:22:30.674216-07:00"
     dependencies:
     - import-values:
       - child: global
@@ -54,7 +54,7 @@ entries:
     version: 0.1.9
   - apiVersion: v2
     appVersion: 0.7.6
-    created: "2024-04-02T13:53:11.507713-07:00"
+    created: "2024-04-02T15:22:30.671071-07:00"
     dependencies:
     - import-values:
       - child: global
@@ -71,7 +71,7 @@ entries:
     version: 0.1.8
   - apiVersion: v2
     appVersion: 0.7.6
-    created: "2024-04-02T13:53:11.504443-07:00"
+    created: "2024-04-02T15:22:30.668283-07:00"
     dependencies:
     - import-values:
       - child: global
@@ -88,7 +88,7 @@ entries:
     version: 0.1.7
   - apiVersion: v2
     appVersion: 0.7.6
-    created: "2024-04-02T13:53:11.501798-07:00"
+    created: "2024-04-02T15:22:30.665154-07:00"
     dependencies:
     - import-values:
       - child: global
@@ -105,7 +105,7 @@ entries:
     version: 0.1.6
   - apiVersion: v2
     appVersion: 0.7.6
-    created: "2024-04-02T13:53:11.498606-07:00"
+    created: "2024-04-02T15:22:30.662474-07:00"
     dependencies:
     - import-values:
       - child: global
@@ -122,7 +122,7 @@ entries:
     version: 0.1.5
   - apiVersion: v2
     appVersion: 0.7.6
-    created: "2024-04-02T13:53:11.496094-07:00"
+    created: "2024-04-02T15:22:30.659375-07:00"
     dependencies:
     - import-values:
       - child: global
@@ -139,7 +139,7 @@ entries:
     version: 0.1.4
   - apiVersion: v2
     appVersion: 0.7.6
-    created: "2024-04-02T13:53:11.493408-07:00"
+    created: "2024-04-02T15:22:30.656682-07:00"
     dependencies:
     - import-values:
       - child: global
@@ -156,7 +156,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: 0.7.6
-    created: "2024-04-02T13:53:11.490217-07:00"
+    created: "2024-04-02T15:22:30.653628-07:00"
     dependencies:
     - import-values:
       - child: global
@@ -173,7 +173,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: 0.7.6
-    created: "2024-04-02T13:53:11.487416-07:00"
+    created: "2024-04-02T15:22:30.650904-07:00"
     dependencies:
     - import-values:
       - child: global
@@ -190,7 +190,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 0.7.6
-    created: "2024-04-02T13:53:11.484204-07:00"
+    created: "2024-04-02T15:22:30.647562-07:00"
     dependencies:
     - import-values:
       - child: global
@@ -205,4 +205,4 @@ entries:
     urls:
     - https://technical-enablement-pingidentity.github.io/BXHelm/ping-bx-0.1.0.tgz
     version: 0.1.0
-generated: "2024-04-02T13:53:11.481438-07:00"
+generated: "2024-04-02T15:22:30.644864-07:00"
