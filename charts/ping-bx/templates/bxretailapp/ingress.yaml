@@ -18,10 +18,12 @@ spec:
     http:
       paths:
       - path: /
-        #pathType: Prefix
+        pathType: Prefix
         backend:
-          serviceName: {{ .Release.Name }}-bxretailapp
-          servicePort: {{ .Values.bxretailapp.services.https.servicePort }}
+          service:
+            name: {{ .Release.Name }}-bxretailapp
+            port:
+              number: {{ .Values.bxretailapp.services.https.servicePort }}
   tls:
   - hosts:
       - {{ .Values.bxretailapp.ingress.host }}
