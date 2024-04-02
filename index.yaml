@@ -3,7 +3,7 @@ entries:
   ping-bx:
   - apiVersion: v2
     appVersion: 0.7.6
-    created: "2024-04-02T11:06:38.949618-07:00"
+    created: "2024-04-02T11:29:53.821012-07:00"
     dependencies:
     - import-values:
       - child: global
@@ -12,24 +12,7 @@ entries:
       repository: https://helm.pingidentity.com
       version: 0.7.6
     description: A Helm chart for Kubernetes
-    digest: f10def8f24d2a61632d8abb774d0bc716eb67d36d182b31369787d56d0da7b60
-    name: ping-bx
-    type: application
-    urls:
-    - https://technical-enablement-pingidentity.github.io/BXHelm/ping-bx-0.2.1.tgz
-    version: 0.2.1
-  - apiVersion: v2
-    appVersion: 0.10.2
-    created: "2024-04-02T11:06:38.946353-07:00"
-    dependencies:
-    - import-values:
-      - child: global
-        parent: global
-      name: ping-devops
-      repository: https://helm.pingidentity.com
-      version: 0.10.2
-    description: A Helm chart for Kubernetes
-    digest: d63dc77235db02ff58cd35cbaa7a4e3837340423894cb058fea7f7006560bd80
+    digest: 72de720579828dd33e2a9349b2cf7331a55a1e9d24964eab7892383281e1b6f1
     name: ping-bx
     type: application
     urls:
@@ -37,7 +20,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 0.7.6
-    created: "2024-04-02T11:06:38.942517-07:00"
+    created: "2024-04-02T11:29:53.818395-07:00"
     dependencies:
     - import-values:
       - child: global
@@ -54,7 +37,7 @@ entries:
     version: 0.1.9
   - apiVersion: v2
     appVersion: 0.7.6
-    created: "2024-04-02T11:06:38.939764-07:00"
+    created: "2024-04-02T11:29:53.81518-07:00"
     dependencies:
     - import-values:
       - child: global
@@ -71,7 +54,7 @@ entries:
     version: 0.1.8
   - apiVersion: v2
     appVersion: 0.7.6
-    created: "2024-04-02T11:06:38.936587-07:00"
+    created: "2024-04-02T11:29:53.81245-07:00"
     dependencies:
     - import-values:
       - child: global
@@ -88,7 +71,7 @@ entries:
     version: 0.1.7
   - apiVersion: v2
     appVersion: 0.7.6
-    created: "2024-04-02T11:06:38.93393-07:00"
+    created: "2024-04-02T11:29:53.809262-07:00"
     dependencies:
     - import-values:
       - child: global
@@ -105,7 +88,7 @@ entries:
     version: 0.1.6
   - apiVersion: v2
     appVersion: 0.7.6
-    created: "2024-04-02T11:06:38.930671-07:00"
+    created: "2024-04-02T11:29:53.806579-07:00"
     dependencies:
     - import-values:
       - child: global
@@ -122,7 +105,7 @@ entries:
     version: 0.1.5
   - apiVersion: v2
     appVersion: 0.7.6
-    created: "2024-04-02T11:06:38.928086-07:00"
+    created: "2024-04-02T11:29:53.803847-07:00"
     dependencies:
     - import-values:
       - child: global
@@ -139,7 +122,7 @@ entries:
     version: 0.1.4
   - apiVersion: v2
     appVersion: 0.7.6
-    created: "2024-04-02T11:06:38.925166-07:00"
+    created: "2024-04-02T11:29:53.800788-07:00"
     dependencies:
     - import-values:
       - child: global
@@ -156,7 +139,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: 0.7.6
-    created: "2024-04-02T11:06:38.922305-07:00"
+    created: "2024-04-02T11:29:53.798014-07:00"
     dependencies:
     - import-values:
       - child: global
@@ -173,7 +156,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: 0.7.6
-    created: "2024-04-02T11:06:38.919454-07:00"
+    created: "2024-04-02T11:29:53.794629-07:00"
     dependencies:
     - import-values:
       - child: global
@@ -190,7 +173,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 0.7.6
-    created: "2024-04-02T11:06:38.916145-07:00"
+    created: "2024-04-02T11:29:53.791923-07:00"
     dependencies:
     - import-values:
       - child: global
@@ -205,4 +188,4 @@ entries:
     urls:
     - https://technical-enablement-pingidentity.github.io/BXHelm/ping-bx-0.1.0.tgz
     version: 0.1.0
-generated: "2024-04-02T10:23:24.441332-07:00"
+generated: "2024-04-02T11:29:53.788491-07:00"
