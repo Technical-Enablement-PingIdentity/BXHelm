@@ -1,0 +1,7 @@
+{{- include "pinglib.env-vars" (list . "bxfinanceapp") -}}
+
+
+{{- define "bxfinanceapp.env-vars" -}}
+data:
+  BX_VAR: "NADA"
+{{- end -}}

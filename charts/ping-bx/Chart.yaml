@@ -15,15 +15,15 @@ type: application
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
 # Versions are expected to follow Semantic Versioning (https://semver.org/)
-version: 0.2.0
+version: 0.2.1
 
 # This matches the version of `ping-devops` this chart depends on 
-appVersion: "0.8.3"
+appVersion: "0.9.21"
 
 # Use PingIdentity Repo to deploy Product Services \ Deployments
 dependencies:
 - name: ping-devops
-  version: 0.8.3
+  version: 0.9.21
   repository: https://helm.pingidentity.com
   import-values:
     - child: global
