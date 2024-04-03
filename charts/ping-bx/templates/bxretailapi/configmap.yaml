@@ -1,7 +1,0 @@
-{{- include "pinglib.configmap" (list . "bxretailapi") -}}
-
-
-{{- define "bxretailapi.configmap" -}}
-data:
-  BX_VAR: "NADA"
-{{- end -}}

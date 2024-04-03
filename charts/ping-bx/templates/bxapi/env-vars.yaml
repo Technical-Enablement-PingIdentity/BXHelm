@@ -1,0 +1,7 @@
+{{- include "pinglib.env-vars" (list . "bxapi") -}}
+
+
+{{- define "bxapi.env-vars" -}}
+data:
+  BX_VAR: "NADA"
+{{- end -}}
