@@ -1,7 +1,8 @@
-{{- include "pinglib.env-vars" (list . "postgres") -}}
+{{- include "pinglib.configmap" (list . "postgres") -}}
 
 
-{{- define "postgres.env-vars" -}}
+
+{{- define "postgres.configmap" -}}
 {{- $top := index . 0 -}}
 {{- $v := index . 1 -}}
 data:
