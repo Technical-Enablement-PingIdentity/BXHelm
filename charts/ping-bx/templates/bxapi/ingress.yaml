@@ -2,7 +2,7 @@
 
 {{- $v := index .Values "bxapi" -}}
 
-apiVersion: networking.k8s.io/v1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   labels:
@@ -18,23 +18,19 @@ spec:
     http:
       paths:
       - path: /
-        pathType: Prefix
+        #pathType: Prefix
         backend:
-          service:
-            name: {{ .Release.Name }}-bxapi
-            port:
-              number: {{ .Values.bxapi.services.https.servicePort }}
+          serviceName: {{ .Release.Name }}-bxapi
+          servicePort: {{ .Values.bxapi.services.https.servicePort }}
 {{- if .Values.bxapi.ingress.alias }} 
   - host: {{ .Values.bxapi.ingress.alias }}
     http:
       paths:
       - path: /
-        pathType: Prefix
+        #pathType: Prefix
         backend:
-          service:
-            name: {{ .Release.Name }}-bxapi
-            port:
-              number: {{ .Values.bxapi.services.https.servicePort }}
+          serviceName: {{ .Release.Name }}-bxapi
+          servicePort: {{ .Values.bxapi.services.https.servicePort }}
 {{- end }}
   tls:
   - hosts:

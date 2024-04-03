@@ -2,7 +2,7 @@
 
 {{- $v := index .Values "bxhealthapp" -}}
 
-apiVersion: networking.k8s.io/v1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   labels:
@@ -18,12 +18,10 @@ spec:
     http:
       paths:
       - path: /
-        pathType: Prefix
+        #pathType: Prefix
         backend:
-          service:
-            name: {{ .Release.Name }}-pingaccess-engine
-            port:
-              number: {{ ( index .Values "ping-devops" "pingaccess-engine" ).services.https.servicePort }}
+          serviceName: {{ .Release.Name }}-pingaccess-engine
+          servicePort: {{ ( index .Values "ping-devops" "pingaccess-engine" ).services.https.servicePort }}
   tls:
   - hosts:
       - {{ .Values.bxhealthapp.ingress.host }}

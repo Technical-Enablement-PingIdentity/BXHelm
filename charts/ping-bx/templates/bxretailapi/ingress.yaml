@@ -2,7 +2,7 @@
 
 {{- $v := index .Values "bxretailapi" -}}
 
-apiVersion: networking.k8s.io/v1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   labels:
@@ -18,12 +18,10 @@ spec:
     http:
       paths:
       - path: /
-        pathType: Prefix
+        #pathType: Prefix
         backend:
-          service:
-            name: {{ .Release.Name }}-bxretailapi
-            port:
-              number: {{ .Values.bxretailapi.services.https.servicePort }}
+          serviceName: {{ .Release.Name }}-bxretailapi
+          servicePort: {{ .Values.bxretailapi.services.https.servicePort }}
   tls:
   - hosts:
       - {{ .Values.bxretailapi.ingress.host }}
