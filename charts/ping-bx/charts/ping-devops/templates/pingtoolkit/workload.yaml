@@ -1,5 +1,0 @@
-{{- include "pinglib.workload" (list . "pingtoolkit" ) -}}
-
-
-{{- define "pingtoolkit.workload" -}}
-{{- end -}}

@@ -1,8 +1,0 @@
-{{- if (index .Values "pingfederate-engine").clustering.autoscaling.enabled -}}
-{{- include "pinglib.hpa" (list . "pingfederate-engine") -}}
-{{- end -}}
-
-
-
-{{- define "pingfederate-engine.hpa" -}}
-{{- end -}}
