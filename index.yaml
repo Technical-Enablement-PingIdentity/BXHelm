@@ -29,6 +29,7 @@ entries:
       version: 0.7.6
     description: A Helm chart for Kubernetes
     digest: 285d3757ec1200188cbb9f96cc524d2174486f2719daa1971e2d7a7de3f779ae
+    digest: 285d3757ec1200188cbb9f96cc524d2174486f2719daa1971e2d7a7de3f779ae
     name: ping-bx
     type: application
     urls:

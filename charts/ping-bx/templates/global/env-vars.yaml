@@ -1,0 +1,9 @@
+{{- include "pinglib.env-vars" (list . "bx-global") -}}
+
+{{- define "bx-global.env-vars" -}}
+{{- $top := index . 0 -}}
+{{- $v := index . 1 -}}
+
+data:
+  NONE: "NADA"
+{{- end -}}
