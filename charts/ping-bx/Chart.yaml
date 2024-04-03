@@ -16,14 +16,6 @@ type: application
 # to the chart and its templates, including the app version.
 # Versions are expected to follow Semantic Versioning (https://semver.org/)
 version: 0.2.1
-version: 0.2.1
 
 # This matches the version of `ping-devops` this chart depends on 
 appVersion: "0.7.6"
-
-# Use PingIdentity Repo to deploy Product Services \ Deployments
-dependencies:
-- name: ping-devops
-  import-values:
-    - child: global
-      parent: global
