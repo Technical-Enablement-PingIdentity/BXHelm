@@ -1,8 +1,0 @@
-{{- if (merge (index .Values "pingfederate-engine") .Values.global).ingress.enabled }}
-{{- include "pinglib.ingress" (list . "pingfederate-engine") -}}
-{{- end -}}
-
-
-
-{{- define "pingfederate-engine.ingress" -}}
-{{- end -}}
